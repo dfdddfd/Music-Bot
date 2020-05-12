@@ -43,6 +43,6 @@ lavacord | v1.1.7 | ✅ (Compatibility verified)
 * [`Dotenv`](https://github.com/motdotla/dotenv)
 * [`@lavacord/discord.js`](https://www.npmjs.com/package/@lavacord/discord.js)
 * [`lavacord`](https://github.com/lavacord/Lavacord)
-
+────────────────────
 * [`Araha`](https://github.com/TeamZenithy/Araha)
 * [`DittoBot`](https://github.com/ditto7890/dittobot)
