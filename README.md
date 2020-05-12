@@ -1,6 +1,8 @@
 # MUsic
 This bot is a music bot using `@lavacord/discord.js`. / It's a good bot for discord servers.
 
+Developer: HΛNGOM#6567
+
 # How to run?
 * [`Download for JDK 13`](https://www.oracle.com/java/technologies/javase-jdk13-downloads.html) [`Download for Lavalink.jar`](https://github.com/Frederikam/Lavalink/releases) [`Download for application.yml`](https://github.com/Frederikam/Lavalink/blob/master/LavalinkServer/application.yml.example)
 
