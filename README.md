@@ -9,12 +9,16 @@ Developer: HΛNGOM#6567
 ```md
 - English
 
+* Wait! JDK requires an Oracle account to download! *
+
 1. After clicking the above text, please download the JDK and Lavalink files.
 2. Modify "BOT_TOKEN / PREFIX / LAVALINK_PASSWORD" in ".env" file accordingly.
 3. Run command "npm i"
 4. Run "node index.js" or "node ."
 
 - Korean
+
+* 잠깐! JDK는 오라클 계정이 있어야만 다운 가능해요! *
 
 1. 위 글자들을 클릭하여, JDK와 Lavalink 파일들을 다운받습니다.
 2. ".env" 파일 내 "BOT_TOKEN / PREFIX / LAVALINK_PASSWORD" 들을 자기 봇에 맞게 변경합니다.
