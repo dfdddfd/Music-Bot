@@ -42,15 +42,6 @@ client.on("ready", () => {
 .on("message", async message => {
     if (message.author.bot || message.system || !message.content.startsWith(process.env.PREFIX)) return;
 
-    if (message.channel.type === "dm" && (message.author.id !== process.env.OWNER_ID)) {
-        message.channel.send(new MessageEmbed()
-        .setAuthor(client.user.username, client.user.displayAvatarURL())
-        .setDescription(`DM에서는 ${client.user.username}을 사용할 수 없습니다.\n${client.user.username}이 있는 서버에서 명령어를 사용해주세요.`)
-        .setColor("RED"));
-        
-        return console.info(`DM MESSAGE: ${message.author.tag}(${message.author.id}): ${message.content}`);
-    }
-
     const args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase();
     const command = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd));
