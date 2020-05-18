@@ -1,3 +1,7 @@
+/*
+    Source: https://github.com/TeamZenithy/Araha/blob/master/instances/guild.js
+*/
+
 const { ms, s, m, h } = require("./time-convert");
 
 /**
@@ -59,8 +63,8 @@ module.exports = class Queue {
     }
 
     songProgress(message, count = 20) {
-        const res = new Array(count).fill("─");
-        res[Math.floor((this.client.musicMgr.queue.get(message.guild.id).player.state.position / this.client.musicMgr.queue.get(message.guild.id).songs[0].info.length) * count)] = "🔘"
+        const res = new Array(count).fill("▬");
+        res[Math.floor((this.client.musicMgr.queue.get(message.guild.id).player.state.position / this.client.musicMgr.queue.get(message.guild.id).songs[0].info.length) * count)] = "🔵"
         return res.join("")
     }
 
@@ -80,4 +84,16 @@ module.exports = class Queue {
     percent(message) {
         return ((this.client.musicMgr.queue.get(message.guild.id).player.state.position / this.client.musicMgr.queue.get(message.guild.id).songs[0].info.length) * 100).toFixed(1)
     }
+
+    seek (s, m = 0, h = 0) {
+        if (isNaN(s) || isNaN(m) || isNaN(h)) return
+        if (!this.songs[0].info.isSeekable) return
+        const time = (s * 1000) + (m * 60 * 1000) + (h * 60 * 60 * 1000)
+        this.player.seek(time)
+        return this.format(s, m, h)
+    }
 }
+
+/*
+    Source: https://github.com/TeamZenithy/Araha/blob/master/instances/guild.js
+*/

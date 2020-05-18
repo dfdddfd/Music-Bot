@@ -47,11 +47,11 @@ module.exports = class MusicMgr {
 
                 this.queue.delete(message.guild.id);
                 this.manager.leave(message.guild.id);
-                message.reply(`${this.client.emojis.cache.find(x => x.name == 'error')} 음성채널에 접속할 수 없어요!\n\`\`\`js\n${err}\n\`\`\``)
+                message.reply(new MessageEmbed().setTitle("에러가 발생했어요!").setDescription(`\`\`\`js\n${err}\n\`\`\``).setColor("#2F3136"));
             }
         } else {
             serverQueue.songs.push(song);
-            message.channel.send(`${this.client.emojis.cache.find(x => x.name == 'check')} **\`${song.info.title} - ${song.info.author}\`** 를(을) 대기열에 추가했어요!`)
+            message.channel.send(new MessageEmbed().setTitle("음악을 대기열에 추가할게요!").setDescription(`[__${song.info.title}__](${song.info.uri}) [${song.requestedBy}]`).setThumbnail(`https://img.youtube.com/vi/${song.info.identifier}/maxresdefault.jpg`).setColor("#2F3136"));
         }
     }
 
@@ -59,7 +59,7 @@ module.exports = class MusicMgr {
         const serverQueue = this.queue.get(guild.id);
 
         if (!song) {
-            serverQueue.textChannel.send(`${this.client.emojis.cache.find(x => x.name == 'check')} 모든 음악을 재생했어요! 이제 음성채널에서 나갈게요!`);
+            serverQueue.textChannel.send(new MessageEmbed().setDescription("이제 음악을 다 재생한 것 같아요! 다음에 또 봐요! 👋").setColor("#2F3136"));
             this.manager.leave(guild.id);
             this.queue.delete(guild.id);
         } else {
@@ -77,7 +77,7 @@ module.exports = class MusicMgr {
                     this.play(guild, serverQueue.songs[0]);
                 });
             serverQueue.player.volume(serverQueue.volume);
-            serverQueue.textChannel.send(new MessageEmbed().setColor("#2F3136").setTitle(song.info.title).setURL(song.info.uri).setDescription(`${this.client.emojis.cache.find(x => x.name == 'check')} 곧 **\`${song.info.title} - ${song.info.author}\`** 를(을) 재생할게요!`).setThumbnail(`https://img.youtube.com/vi/${song.info.identifier}/maxresdefault.jpg`))
+            serverQueue.textChannel.send(new MessageEmbed().setColor("#2F3136").setTitle("음악을 재생할게요!").setDescription(`[__${song.info.title}__](${song.info.uri}) [${song.requestedBy}]`).setThumbnail(`https://img.youtube.com/vi/${song.info.identifier}/maxresdefault.jpg`));
         }
     }
 

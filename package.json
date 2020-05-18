@@ -1,6 +1,6 @@
 {
   "name": "MUsic",
-  "version": "1.0.0",
+  "version": "5.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,8 @@
     "ascii-table": "0.0.9",
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
-    "lavacord": "^1.1.7"
+    "koreanbots": "^1.0.9",
+    "lavacord": "^1.1.7",
+    "slyrics": "^0.1.42"
   }
 }
