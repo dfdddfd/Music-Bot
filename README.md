@@ -1,4 +1,8 @@
 # MUsic
+항상 MUsic 깃허브를 찾아주셔서 감사했습니다.
+오늘 부로 MUsic 깃허브는 더 이상 업데이트되지 않을 예정입니다.
+────────────────────
+
 This bot is a music bot using `@lavacord/discord.js`. / It's a good bot for discord servers.
 
 Developer: HΛNGOM#6567
