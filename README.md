@@ -1,8 +1,10 @@
-# Developer
+# Thanks for
 
 이름 | 홈페이지
 ---- | ----
-한곰(HANGOM) | https://dev-hg.ml
+한곰(개발자) | [[홈페이지]](https://dev-hg.ml) [[오픈채팅]](https://open.kakao.com/me/hg_aaqs1221)
+디토(자료제공) | [[홈페이지]](http://is.gd/dittoBot)
+'-'(재수정) | [[홈페이지]](https://wtfbot.ga)
 
 # Module Requirements
 
