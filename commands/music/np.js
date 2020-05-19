@@ -10,14 +10,13 @@ module.exports = {
         const player = client.musicMgr.queue.get(message.guild.id);
         if (!player) return message.channel.send(new MessageEmbed()
         .setDescription("재생중인 음악이 없어요!")
-        .setColor("#2F3136"))
+        .setColor("#2F3136"));
 
         const song = player.songs[0];
 
-        message.channel.send(new MessageEmbed()
-        .setDescription(`[__${song.info.title}__](${song.info.uri}) [${song.requestedBy}]`)
-        .setThumbnail(`https://img.youtube.com/vi/${song.info.identifier}/maxresdefault.jpg`)
+        const m = await message.channel.send(new MessageEmbed()
+        .setDescription(`[__${song.info.title}__](${song.info.uri}) [${song.requestedBy}]\n${player.playing ? "▶ 재생 중" : "⏸ 일시정지"} | 채널: ${song.info.author}`)
         .setFooter(`${player.songProgress(message)} [${player.duration(player.player.state.position)} / ${player.duration(song.info.length)}]`)
-        .setColor("#2F3136"))
+        .setColor("#2F3136"));
     }
 }

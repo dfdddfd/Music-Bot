@@ -10,10 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "^0.3.2",
     "@lavacord/discord.js": "0.0.6",
     "ascii-table": "0.0.9",
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
+    "ffmpeg-static": "^4.2.1",
     "koreanbots": "^1.0.9",
     "lavacord": "^1.1.7",
     "slyrics": "^0.1.42"
