@@ -1,6 +1,6 @@
 # Thanks for
 
-이름
+Members
 ----
 한곰(Developer)
 디토(Materials provided/Developer)
