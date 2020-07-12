@@ -1,5 +1,3 @@
-# Thanks for
-
 Members
 ----
 한곰(Developer)
