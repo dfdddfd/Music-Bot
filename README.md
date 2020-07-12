@@ -1,7 +1,7 @@
 # Thanks for
 
-이름 | 홈페이지
----- | ----
+이름
+----
 한곰(Developer)
 디토(Materials provided/Developer)
 
